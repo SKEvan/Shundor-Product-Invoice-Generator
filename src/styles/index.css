@@ -1,0 +1,43 @@
+@import 'tailwindcss';
+
+/* Brand palette taken from the Shundor Product logos: hot pink, white and gold. */
+@theme {
+  --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand-50: #fff1f7;
+  --color-brand-100: #ffe3ef;
+  --color-brand-200: #ffc6df;
+  --color-brand-300: #ff97c3;
+  --color-brand-400: #f95fa1;
+  --color-brand-500: #ec2d82;
+  --color-brand-600: #d6176c;
+  --color-brand-700: #b30f58;
+  --color-brand-800: #8f0f49;
+  --color-brand-900: #6e0d39;
+
+  --color-gold-200: #f6e3b4;
+  --color-gold-300: #eccd85;
+  --color-gold-400: #deb05a;
+  --color-gold-500: #c9993a;
+  --color-gold-600: #a77b25;
+}
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-brand-50 text-gray-800 antialiased;
+  }
+
+  /* Hide number input spinners — prices are typed, not clicked. */
+  input[type='number']::-webkit-outer-spin-button,
+  input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+}
